@@ -134,7 +134,7 @@ const config = {
     },
     // API configuration for sending emails
     api: {
-      baseURL: `https://4nathan-production.up.railway.app/`,
+      baseURL: `https://4nathan-production.up.railway.app`,
       // Configure this based on your development port (check server/app.js or .env.PORT) and update this to your live backend URL after deployment
 
       sendEmailEndpoint: "/send-email", // Endpoint for sending emails
