@@ -8,16 +8,13 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.get('/', (req, res) => {
-  res.send('🎉 Backend is up and running!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
-
-app.use(cors({ origin: "https://localhost:5173" })); // This is for development with Vite. Update this to your frontend domain (e.g., "https://your-frontend-domain.com") if you have deployed it.
+app.use(cors({ origin: "https://localhost:5173" })); // update ke domain frontend kalau udah live
 app.use(express.json({ limit: "10mb" }));
+
+// ✅ Tambahkan route root
+app.get("/", (req, res) => {
+  res.send("🎉 Backend is up and running!");
+});
 
 app.post("/send-email", async (req, res) => {
   try {
@@ -43,11 +40,12 @@ app.post("/send-email", async (req, res) => {
 
     let mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "natasyarianaa@gmail.com", // this is where you wish to get the letter, files and score data , you can use the same email in .env if you want (just type process.env.EMAIL_USER)
+      to: "natasyarianaa@gmail.com",
       subject: "Drawings and letter for you",
       text: `${message}\n\n${score}`,
       attachments: attachments,
     };
+
     await transporter.sendMail(mailOptions);
     console.log("Email sent successfully");
     res.status(200).json();
@@ -57,4 +55,8 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// ✅ Hanya satu listen di bawah
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
