@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({ origin: "https://stellar-biscuit-d543b4.netlify.app/" })); // update ke domain frontend kalau udah live
+app.use(cors({ origin: "https://stellar-biscuit-d543b4.netlify.app" })); // update ke domain frontend kalau udah live
 app.use(express.json({ limit: "10mb" }));
 
 // ✅ Tambahkan route root
