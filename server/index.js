@@ -8,7 +8,7 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({ origin: "http://localhost:5173" })); // This is for development with Vite. Update this to your frontend domain (e.g., "https://your-frontend-domain.com") if you have deployed it.
+app.use(cors({ origin: "https://stellar-biscuit-d543b4.netlify.app/" })); // This is for development with Vite. Update this to your frontend domain (e.g., "https://your-frontend-domain.com") if you have deployed it.
 app.use(express.json({ limit: "10mb" }));
 
 app.post("/send-email", async (req, res) => {
@@ -35,7 +35,7 @@ app.post("/send-email", async (req, res) => {
 
     let mailOptions = {
       from: process.env.EMAIL_USER,
-      to: "your-email@gmail.com", // this is where you wish to get the letter, files and score data , you can use the same email in .env if you want (just type process.env.EMAIL_USER)
+      to: "natasyarianaa@gmail.com", // this is where you wish to get the letter, files and score data , you can use the same email in .env if you want (just type process.env.EMAIL_USER)
       subject: "Drawings and letter for you",
       text: `${message}\n\n${score}`,
       attachments: attachments,

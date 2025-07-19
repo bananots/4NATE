@@ -5,16 +5,16 @@ const config = {
     sentencePerSlide: 2, // Adjust this to control how many sentences are shown per slide
     slides: [
       [
-        "Hey my love",
-        "I made something for you for valentine's day 💖",
+        "hiii bub",
+        "ada yang tambah tua hari inii",
         // If you set `sentencePerSlide` to 2, the next text won't be visible
-        "Surprise!",
+        "happy birthdayyy!",
       ],
       [
-        "This is not a regular website",
-        "Coz I want you to do the work HAHAHA😈",
+        "karena ada yang rewel gamau dikasih kado,",
+        "kita rayain pake cara yang ribet",
       ],
-      ["I want to know how well you know me by now", "So enjoy!"],
+      ["P.S ngebuat ini lebih SUSAH drpd ngasih kado, asli", "so enjoy!"],
       // You can add more slides or delete slides as needed
     ],
   },
@@ -22,7 +22,7 @@ const config = {
   // ==== QUIZ PAGE ====
   quizPage: {
     // Color of the progress bar
-    progressBarColor: "#cf6b87",
+    progressBarColor: "#4B5320",
     // Text labels for the quiz
     text: {
       questionLabel: "Question",
@@ -35,38 +35,37 @@ const config = {
     questions: [
       {
         id: 1, // Unique ID for the question
-        title: "What is my favorite food?",
-        description: "I always mention this food",
+        title: "Bangun tidur ku terus...?",
         correctAnswer: "duck", // Correct answer value (must match one of the options' `value`)
         options: [
-          { value: "duck", label: "Fried Duck" },
-          { value: "dumplings", label: "Chinese Dumplings" },
-          { value: "indomie", label: "Indomie Noodles" },
-          { value: "bakso", label: "Bakso" },
+          { value: "duck", label: "Tidur lagi" },
+          { value: "dumplings", label: "C*li" },
+          { value: "indomie", label: "Masak" },
+          { value: "bakso", label: "Udud" },
         ],
       },
       {
         id: 2,
-        title: "What is my favorite drink?",
-        description: "I buy this almost everyday",
-        correctAnswer: "tea",
+        title: "128√e980",
+        description: "gabole nyontek google",
+        correctAnswer: "i love u",
         options: [
-          { value: "latte", label: "Coffee Latte" },
-          { value: "cappucino", label: "Caramel Frappucino" },
-          { value: "tea", label: "Sweet Iced Tea" },
-          { value: "coke", label: "Coca Cola" },
+          { value: "4", label: "4" },
+          { value: "1382", label: "1382" },
+          { value: "i love u", label: "i love u" },
+          { value: "gatau", label: "gatau" },
         ],
       },
       {
         id: 3,
-        title: "When is my Birthday?",
-        description: "Don't make the same mistake twice:D",
-        correctAnswer: "sept-14",
+        title: "terakhir, kapan ulang tahun chef juna - 1 hari?",
+        description: "kykny lu dah tau sih ini",
+        correctAnswer: "jul-19",
         options: [
-          { value: "sept-12", label: "September 12th" },
-          { value: "oct-16", label: "October 16th" },
-          { value: "august-14", label: "August 14th" },
-          { value: "sept-14", label: "September 14th" },
+          { value: "jul-19", label: "July 19" },
+          { value: "jul-20", label: "July 20" },
+          { value: "aug-19", label: "August 19" },
+          { value: "aug-20", label: "August 20" },
         ],
       },
       // You can add more questions here
@@ -75,25 +74,25 @@ const config = {
     gifConfig: [
       {
         check: (score) => score >= 3, // If score is 3 or above, this GIF will be shown
-        heading: "Wow!!!!!!! unbelievable",
+        heading: "asik!!!!!!",
         gifName: "gif4.gif", // Name of the GIF file in `src/assets/gifs`
         style: "w-44", // Tailwind CSS class for styling the GIF
       },
       {
         check: (score) => score === 2, // If score is exactly 2, this GIF will be shown
-        heading: "Ehhh, not bad! so I still love you",
+        heading: "okelahh",
         gifName: "gif3.gif",
         style: "w-44",
       },
       {
         check: (score) => score === 1, // If score is exactly 1, this GIF will be shown
-        heading: "It's okay, I know you tried so hard",
+        heading: "cemen",
         gifName: "gif2.gif",
         style: "w-44",
       },
       {
         check: () => true, // Default case (if none of the above conditions are met)
-        heading: "umm... wtf???",
+        heading: "nathan bauu",
         gifName: "gif1.gif",
         style: "w-44",
       },
@@ -104,17 +103,17 @@ const config = {
   drawingPage: {
     // Messages displayed on the drawing page
     messages: [
-      "Can you draw me a flower",
-      "Give me another flower",
-      "Draw me one last flower",
+      "coba gambar 1 wish kamu tahun ini",
+      "kali ini gambar kamu 5 thn lagi",
+      "kalo punya 1M mau dipake apa?",
     ],
     // Colors available for drawing
     COLORS: ["#000000", "#FF7043", "#66BB6A", "#42A5F5", "#FFEE58"],
     // Text for the submit button
     text: {
-      submitText: "Submit",
-      finalText: "Thank you baby ❤️",
-      loading: "Sending...",
+      submitText: "submit",
+      finalText: "nice babe",
+      loading: "sending...",
     },
   },
 
@@ -122,10 +121,10 @@ const config = {
   letterPage: {
     // Placeholder text for the letter input
     placeholder: {
-      default: `Now, I want you to write me a letter :) Once you click "Send Message" I'll be able to see it hehe`,
-      emptyInput: "You have to write me something first!! ):",
-      success: "Thank you for the message my love!",
-      error: "Failed to send the message. try it again!",
+      default: `sekarang coba tulis surat ke dirimu sendiri 1 tahun kedepan.`,
+      emptyInput: "wish kamu, goals, vision, etc",
+      success: "bubbbbb makasi suratnyaa",
+      error: "failed to send the message. try it again!",
     },
     // Button text
     buttons: {
@@ -135,7 +134,7 @@ const config = {
     },
     // API configuration for sending emails
     api: {
-      baseURL: `http://localhost:3000`,
+      baseURL: `https://4nathan-production.up.railway.app/`,
       // Configure this based on your development port (check server/app.js or .env.PORT) and update this to your live backend URL after deployment
 
       sendEmailEndpoint: "/send-email", // Endpoint for sending emails
@@ -146,7 +145,7 @@ const config = {
   closingPage: {
     // Final message displayed on the closing page
     message:
-      "Thank you for contributing to this project. I love you with all my heart",
+      "danke udah ikut 5 menit survey yang dibuat 5 hari 5 malam ini, sekarang cek gmail-mu ya",
     // GIF displayed on the closing page
     gifName: "closing.gif", // Name of the GIF file in `src/assets/gifs`
     style: "w-44", // Tailwind CSS class for styling the GIF
