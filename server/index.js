@@ -8,6 +8,14 @@ const cors = require("cors");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+  res.send('🎉 Backend is up and running!');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 app.use(cors({ origin: "https://localhost:5173" })); // This is for development with Vite. Update this to your frontend domain (e.g., "https://your-frontend-domain.com") if you have deployed it.
 app.use(express.json({ limit: "10mb" }));
 
